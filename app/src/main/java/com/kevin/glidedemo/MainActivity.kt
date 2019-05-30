@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity() {
     private fun initImgOne() {
         Glide.with(this)
             .load(imgUrl1)
+            //.apply(RequestOptions.overrideOf())
             .apply(RequestOptions.priorityOf(Priority.HIGH))
             .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.ALL))
             .apply(RequestOptions.placeholderOf(R.drawable.img_place_holder))
